@@ -1,3 +1,4 @@
+# Poort 587 (STARTTLS): Hetzner blokkeert uitgaand 465.
 # Manu Sign op Coolify: gebaseerd op Coolify's Documenso-sjabloon, met ons eigen image en een
 # ondertekeningscertificaat dat bewaard blijft (wordt alleen de eerste keer aangemaakt).
 services:
@@ -15,8 +16,8 @@ services:
       - NEXT_PUBLIC_WEBAPP_URL=${SERVICE_URL_DOCUMENSO}
       - NEXT_PRIVATE_SMTP_TRANSPORT=smtp-auth
       - NEXT_PRIVATE_SMTP_HOST=smtp.hostinger.com
-      - NEXT_PRIVATE_SMTP_PORT=465
-      - NEXT_PRIVATE_SMTP_SECURE=true
+      - NEXT_PRIVATE_SMTP_PORT=587
+      - NEXT_PRIVATE_SMTP_SECURE=false
       - NEXT_PRIVATE_SMTP_USERNAME=${SMTP_USERNAME:-manu@zegmaarmanu.be}
       - NEXT_PRIVATE_SMTP_PASSWORD=${SMTP_PASSWORD}
       - NEXT_PRIVATE_SMTP_FROM_NAME=Manu Sign
