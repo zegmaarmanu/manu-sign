@@ -52,7 +52,7 @@ export const TemplateFooter = ({ isDocument = true, reportUrl }: TemplateFooterP
 
       {!branding.brandingEnabled && (
         <Text className="my-8 text-muted-foreground text-sm">
-          Zeg maar Manu · Pol De Montstraat 40, 1760 Roosdaal, België
+          ZegMaarManu BV · Pol De Montstraat 40, 1760 Roosdaal, België
           <br />
           BTW BE 0798.992.166 ·{' '}
           <Link href="https://zegmaarmanu.be" target="_blank">

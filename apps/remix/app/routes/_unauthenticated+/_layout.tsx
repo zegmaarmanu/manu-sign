@@ -29,7 +29,7 @@ export default function Layout() {
         </div>
 
         <address className="hidden text-sm text-white/50 not-italic leading-relaxed lg:block">
-          Zeg maar Manu · Pol De Montstraat 40, 1760 Roosdaal
+          ZegMaarManu BV · Pol De Montstraat 40, 1760 Roosdaal
           <br />
           BTW BE 0798.992.166 ·{' '}
           <a href="https://zegmaarmanu.be" target="_blank" rel="noopener noreferrer" className="hover:text-white">
