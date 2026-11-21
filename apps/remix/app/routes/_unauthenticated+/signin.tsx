@@ -117,7 +117,7 @@ export default function SignIn({ loaderData }: Route.ComponentProps) {
 
   return (
     <div className="w-screen max-w-lg px-4">
-      <div className="z-10 rounded-xl border-2 border-black bg-white p-6 shadow-[6px_6px_0_#000] dark:border-border dark:bg-background dark:shadow-none">
+      <div className="z-10 rounded-xl border-2 border-black bg-white p-6 shadow-[6px_6px_0_#000]">
         {signupError && (
           <Alert variant="destructive" className="mb-4">
             <AlertDescription>{_(signupError)}</AlertDescription>

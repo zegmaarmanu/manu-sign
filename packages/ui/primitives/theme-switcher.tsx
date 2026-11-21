@@ -3,7 +3,10 @@ import { motion } from 'framer-motion';
 import { Monitor, MoonStar, Sun } from 'lucide-react';
 import { Theme, useTheme } from 'remix-themes';
 
-export const ThemeSwitcher = () => {
+// Manu Sign is altijd licht: geen keuze tussen licht, donker of systeem.
+export const ThemeSwitcher = () => null;
+
+const UnusedThemeSwitcher = () => {
   const [theme, setTheme] = useTheme();
   const isMounted = useIsMounted();
 

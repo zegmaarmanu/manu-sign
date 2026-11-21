@@ -23,7 +23,7 @@ export const TemplateBrandingLogo = ({ assetBaseUrl, className = 'mb-4 h-6' }: T
   if (!hasCustomBrandingLogo) {
     const manuSignLogoUrl = getEmailAssetUrl(assetBaseUrl, 'static/logo.png');
 
-    return <Img src={manuSignLogoUrl} alt="Manu Sign" className={className} />;
+    return <Img src={manuSignLogoUrl} alt="ZegMaarManu" className={className} />;
   }
 
   const brandingLogo = <Img src={branding.brandingLogo} alt="Branding Logo" className={className} />;

@@ -22,7 +22,7 @@ import {
   useLoaderData,
   useMatches,
 } from 'react-router';
-import { PreventFlashOnWrongTheme, ThemeProvider, useTheme } from 'remix-themes';
+import { PreventFlashOnWrongTheme, Theme, ThemeProvider } from 'remix-themes';
 import { nonceMiddleware } from '~/middleware/nonce';
 import type { Route } from './+types/root';
 import stylesheet from './app.css?url';
@@ -102,10 +102,10 @@ export async function loader({ context, request }: Route.LoaderArgs) {
 }
 
 export function Layout({ children }: { children: React.ReactNode }) {
-  const { theme, basePath } = useLoaderData<typeof loader>() || {};
+  const { basePath } = useLoaderData<typeof loader>() || {};
 
   return (
-    <ThemeProvider specifiedTheme={theme} themeAction={`${basePath ?? ''}/api/theme`}>
+    <ThemeProvider specifiedTheme={Theme.LIGHT} themeAction={`${basePath ?? ''}/api/theme`}>
       <LayoutContent>{children}</LayoutContent>
     </ThemeProvider>
   );
@@ -122,7 +122,8 @@ export function LayoutContent({ children }: { children: React.ReactNode }) {
     ...data
   } = useLoaderData<typeof loader>() || {};
 
-  const [theme] = useTheme();
+  // Manu Sign is altijd licht, ook als het toestel op donkere modus staat.
+  const theme = Theme.LIGHT;
 
   const basePath = data.basePath ?? '';
 
@@ -150,7 +151,7 @@ export function LayoutContent({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links nonce={nonce(cspNonce)} />
         <meta name="google" content="notranslate" />
-        <PreventFlashOnWrongTheme ssrTheme={Boolean(data.theme)} nonce={nonce(cspNonce)} />
+        <PreventFlashOnWrongTheme ssrTheme nonce={nonce(cspNonce)} />
 
         {disableAnimations && (
           <style
