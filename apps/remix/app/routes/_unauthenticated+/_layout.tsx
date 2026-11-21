@@ -28,7 +28,14 @@ export default function Layout() {
           </p>
         </div>
 
-        <p className="hidden text-sm text-white/50 lg:block">Zeg maar Manu · zegmaarmanu.be</p>
+        <address className="hidden text-sm text-white/50 not-italic leading-relaxed lg:block">
+          Zeg maar Manu · Pol De Montstraat 40, 1760 Roosdaal
+          <br />
+          BTW BE 0798.992.166 ·{' '}
+          <a href="https://zegmaarmanu.be" target="_blank" rel="noopener noreferrer" className="hover:text-white">
+            zegmaarmanu.be
+          </a>
+        </address>
 
         <div aria-hidden className="absolute inset-x-0 bottom-0 flex flex-col">
           <span className="h-1.5 bg-[#ffec00]" />
