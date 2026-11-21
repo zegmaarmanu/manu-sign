@@ -20,13 +20,13 @@ export const OrganisationJoinEmailTemplate = ({
   assetBaseUrl = 'http://localhost:3002',
   baseUrl = 'https://documenso.com',
   memberName = 'John Doe',
-  memberEmail = 'johndoe@documenso.com',
+  memberEmail = 'johndoe@zegmaarmanu.be',
   organisationName = 'Organisation Name',
   organisationUrl = 'demo',
 }: OrganisationJoinEmailProps) => {
   const { _ } = useLingui();
 
-  const previewText = msg`A member has joined your organisation on Documenso`;
+  const previewText = msg`A member has joined your organisation on Manu Sign`;
 
   return (
     <Html>

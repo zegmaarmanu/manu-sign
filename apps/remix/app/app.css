@@ -1,5 +1,14 @@
 @import "@documenso/ui/styles/theme.css";
 
+/* Space Grotesk: lettertype van de Manu Sign-huisstijl (logo en titels). */
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("/fonts/space-grotesk-variable.ttf") format("truetype-variations");
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* Inter Variable Fonts */
 @font-face {
   font-family: "Inter";

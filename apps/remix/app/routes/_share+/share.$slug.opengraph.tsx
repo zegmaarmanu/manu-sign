@@ -144,7 +144,7 @@ export const loader = async ({ params }: Route.LoaderArgs) => {
         <h2
           style={{
             fontSize: '20px',
-            // Pinned so the heading stays level with the "Join Documenso" text baked into the frame image.
+            // Pinned so the heading stays level with the "Join Manu Sign" text baked into the frame image.
             marginTop: 20,
             color: '#828282',
             fontFamily: 'Inter',

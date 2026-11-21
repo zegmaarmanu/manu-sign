@@ -62,9 +62,9 @@ export const NEXT_PRIVATE_INTERNAL_WEBAPP_URL = () =>
 export const IS_BILLING_ENABLED = () => env('NEXT_PUBLIC_FEATURE_BILLING_ENABLED') === 'true';
 
 /**
- * Whether this instance is Documenso Cloud (managed SaaS).
+ * Whether this instance is Manu Sign Cloud (managed SaaS).
  *
- * Used so we can show a different UI for Documenso Cloud and self-hosted instances since
+ * Used so we can show a different UI for Manu Sign Cloud and self-hosted instances since
  * there are things like billing, upsells, documenso links, etc that don't make sense for self-hosted instances.
  */
 export const IS_DOCUMENSO_CLOUD = () => env('NEXT_PUBLIC_IS_DOCUMENSO_CLOUD') === 'true';
@@ -100,12 +100,12 @@ export const IS_AI_FEATURES_CONFIGURED = (): boolean => {
 export const NEXT_PRIVATE_USE_PLAYWRIGHT_PDF = () => env('NEXT_PRIVATE_USE_PLAYWRIGHT_PDF') === 'true';
 
 export const NEXT_PRIVATE_SIGNING_TIMESTAMP_AUTHORITY = () => env('NEXT_PRIVATE_SIGNING_TIMESTAMP_AUTHORITY');
-export const NEXT_PRIVATE_SIGNING_REASON = () => env('NEXT_PRIVATE_SIGNING_REASON') || 'Signed by Documenso';
+export const NEXT_PRIVATE_SIGNING_REASON = () => env('NEXT_PRIVATE_SIGNING_REASON') || 'Signed by Manu Sign';
 
 export const NEXT_PRIVATE_SIGNING_TRANSPORT = () => env('NEXT_PRIVATE_SIGNING_TRANSPORT') || 'local';
 
 /**
- * Whether this Documenso instance is running in CSC (Cloud Signature Consortium) mode.
+ * Whether this Manu Sign instance is running in CSC (Cloud Signature Consortium) mode.
  *
  * CSC mode routes signing through a third-party Trust Service Provider for
  * Advanced and Qualified Electronic Signatures (AES/QES). It is instance-wide

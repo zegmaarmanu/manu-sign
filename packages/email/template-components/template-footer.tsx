@@ -29,18 +29,6 @@ export const TemplateFooter = ({ isDocument = true, reportUrl }: TemplateFooterP
         </Text>
       )}
 
-      {isDocument && !branding.brandingHidePoweredBy && (
-        <Text className="my-4 text-base text-muted-foreground">
-          <Trans>
-            This document was sent using{' '}
-            <Link className="text-primary" href="https://documen.so/mail-footer">
-              Documenso
-            </Link>
-            .
-          </Trans>
-        </Text>
-      )}
-
       {branding.brandingEnabled && branding.brandingCompanyDetails && (
         <Text className="my-8 text-muted-foreground text-sm">
           {branding.brandingCompanyDetails.split('\n').map((line, idx) => {
@@ -64,9 +52,11 @@ export const TemplateFooter = ({ isDocument = true, reportUrl }: TemplateFooterP
 
       {!branding.brandingEnabled && (
         <Text className="my-8 text-muted-foreground text-sm">
-          Documenso, Inc.
+          Manu Sign · Zeg maar Manu
           <br />
-          2261 Market Street, #5211, San Francisco, CA 94114, USA
+          <Link href="https://zegmaarmanu.be" target="_blank">
+            zegmaarmanu.be
+          </Link>
         </Text>
       )}
     </Section>
