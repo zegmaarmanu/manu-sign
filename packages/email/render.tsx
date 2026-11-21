@@ -57,6 +57,9 @@ const buildEmailColors = (brandingColors?: EmailBrandingColors): Record<string, 
   };
 };
 
+// Sommige mailprogramma's kennen ui-sans-serif/system-ui niet en tonen dan een monospace-letter.
+const EMAIL_FONT_STACK = ['Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'];
+
 export const render = async (element: React.ReactNode, options?: RenderOptions) => {
   const { branding, ...otherOptions } = options ?? {};
 
@@ -69,6 +72,7 @@ export const render = async (element: React.ReactNode, options?: RenderOptions) 
           theme: {
             extend: {
               colors: tailwindColors,
+              fontFamily: { sans: EMAIL_FONT_STACK },
             },
           },
         }}
@@ -97,6 +101,7 @@ export const renderWithI18N = async (element: React.ReactNode, options?: RenderO
             theme: {
               extend: {
                 colors: tailwindColors,
+                fontFamily: { sans: EMAIL_FONT_STACK },
               },
             },
           }}

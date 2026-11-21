@@ -54,7 +54,8 @@ for base in ["apps/remix/public", "packages/assets"]:
     icon(64).save(out(f"{base}/favicon.ico"), sizes=[(16, 16), (32, 32), (48, 48), (64, 64)])
 
 # E-maillogo (wordt op h-6 = 24px getoond, dus ruim scherp).
-wordmark(96).save(out("packages/assets/static/logo.png"))
+for p in ["packages/assets/static/logo.png", "packages/email/static/logo.png", "apps/remix/public/static/logo.png"]:
+    wordmark(96).save(out(p))
 
 # Deelbeeld 1200x630.
 og = Image.new("RGBA", (1200, 630), PAPER)
