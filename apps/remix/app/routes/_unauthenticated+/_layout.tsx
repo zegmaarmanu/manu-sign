@@ -34,6 +34,11 @@ export default function Layout() {
           BTW BE 0798.992.166 ·{' '}
           <a href="https://zegmaarmanu.be" target="_blank" rel="noopener noreferrer" className="hover:text-white">
             zegmaarmanu.be
+          </a>{' '}
+          ·{' '}
+          {/* AGPL: wie de dienst gebruikt, moet de broncode van deze aangepaste versie kunnen vinden. */}
+          <a href={SOURCE_URL} target="_blank" rel="noopener noreferrer" className="hover:text-white">
+            broncode
           </a>
         </address>
 
@@ -51,12 +56,11 @@ export default function Layout() {
 
         <footer className="mt-8 flex w-full flex-col items-center gap-2">
           <PublicLegalLinks />
-          {/* AGPL: wie de dienst gebruikt, moet de broncode van deze aangepaste versie kunnen vinden. */}
           <a
             href={SOURCE_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-muted-foreground text-xs hover:text-foreground hover:underline"
+            className="text-muted-foreground text-xs hover:text-foreground hover:underline lg:hidden"
           >
             Broncode
           </a>
